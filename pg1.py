@@ -150,7 +150,7 @@ def _create_vector_extension(conn: Engine) -> None:
                 "CREATE EXTENSION IF NOT EXISTS vector;"
             )
             connection.execute(statement)
-class PostgresDB(BaseModel): 
+class PostgresDB(): 
     def __init__(self, config: PostgresDBConfig = PostgresDBConfig()):
         self.config: PostgresDBConfig = config
         self.embedding_fn = embed_content
